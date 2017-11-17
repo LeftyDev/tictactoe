@@ -1,0 +1,51 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #fdbb2d, #b21f1f, #1a2a6c);
+  color: white;
+  font-family: 'Arimo', sans-serif;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: white;
+  opacity: 0.5;
+  color: #2e2e2e;
+  font-size: 48px;
+}
+
+.box:not(:last-child) {
+  margin-right: 5px;
+}
+
+h1 {
+  font-size: 62px;
+  margin-top: 0;
+}
+
+#root {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+button {
+  height: 50px;
+  width: 100%;
+  border: none;
+  background: white;
+  opacity: 0.5;
+  color: #222222;
+  cursor: pointer;
+}
