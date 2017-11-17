@@ -40,6 +40,11 @@ h1 {
   margin-bottom: 5px;
 }
 
+p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+}
+
 button {
   height: 50px;
   width: 100%;
@@ -48,4 +53,7 @@ button {
   opacity: 0.5;
   color: #222222;
   cursor: pointer;
+  font-family: 'Arimo', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }

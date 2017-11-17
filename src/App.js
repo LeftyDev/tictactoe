@@ -62,14 +62,16 @@ class DataStore {
 
     resetGame(action) {
         if (action) {
-            this.data = [
-                ["", "", ""],
-                ["", "", ""],
-                ["", "", ""]
-            ];
-
-            //dispatch commanding action to App component
-            this.registeredWatchers[0].resetGame(this.data);
+            // this.data = [
+            //     ["", "", ""],
+            //     ["", "", ""],
+            //     ["", "", ""]
+            // ];
+            //
+            // //dispatch commanding action to App component
+            // this.registeredWatchers.map((watcher) => {
+            //     watcher.resetGame(this.data)
+            // });
         }
     }
 }
@@ -151,10 +153,17 @@ class Grid extends Component {
         }
     }
 
+    resetGame(data) {
+        //doesn't work properly?
+        // this.setState({
+        //     inputs: data,
+        //     turn: "x"
+        // })
+    }
+
     render() {
         return (
             <div>
-                {console.log(this.state.inputs)}
                 {
                     //data.inputs.map((row, rowNum) => {}
                     this.state.inputs.map((row, rowNum) => {
@@ -238,7 +247,13 @@ class App extends Component {
 
     resetGame(data) {
         if (data) {
-
+            //doesn't work properly??
+            // this.setState({
+            //     inputs: data,
+            //     currentPlayer: "x",
+            //     winner: "",
+            //     takenSpace: false
+            // })
         }
     }
 
@@ -255,13 +270,13 @@ class App extends Component {
 
     renderText() {
         if (this.state.winner === "" && this.state.takenSpace === false) {
-            return <p>It is now player {this.state.currentPlayer}'s turn.</p>
+            return (<p>It is now player {this.state.currentPlayer}'s turn.</p>)
         } else if ((this.state.winner === "x" || this.state.winner === "o") && this.state.takenSpace === false) {
-            return <p>Player {this.state.winner} is the winner.</p>
+            return (<p>Player {this.state.winner} is the winner.</p>)
         } else if (this.state.winner === "tie" && this.state.takenSpace === false) {
-            return <p>The match ended in a {this.state.winner}.</p>
+            return (<p>The match ended in a {this.state.winner}.</p>)
         } else if (this.state.takenSpace === true) {
-            return <p>Don't select a space that is being used.</p>
+            return (<p>Don't select a space that is being used.</p>)
         }
     }
 
